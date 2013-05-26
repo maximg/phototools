@@ -13,7 +13,7 @@ if '%DST%' == '' (
 	exit /b
 )
 
-set FILES=*.mp4 *.mov *.mts *.3gp
+set FILES=*.mp4 *.mov *.mts *.3gp *.wmv *.lrv
 set RB=robocopy /r:3 /w:5 /s /tee /np /xc /xn /xo /log:%DST%\import_video.log %FILES%
 
 set TIMESTAMP=%DATE:~10,4%-%DATE:~4,2%-%DATE:~7,2%-%TIME:~0,2%-%TIME:~3,2%-%TIME:~6,2%
