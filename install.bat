@@ -17,10 +17,10 @@ if not exist %DEST% (
 	exit /b
 )
 
-attrib -r %DEST%\import*.bat
+set FILES=import*.bat backup*.bat
 
-copy /y import*.bat %DEST%
-
-attrib +r %DEST%\import*.bat
+for %%F in (%FILES%) do attrib -r %DEST%\%%F
+for %%F in (%FILES%) do copy /y %%F %DEST%
+for %%F in (%FILES%) do attrib +r %DEST%\%%F
 
 pause
