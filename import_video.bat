@@ -4,6 +4,7 @@ setlocal EnableDelayedExpansion
 
 set SOURCES=
 dir L:\ && set SOURCES=L:\ %SOURCES% 
+dir e:\ && set SOURCES=e:\ %SOURCES% 
 
 if "%SOURCES%" == "" (
 	echo ERROR: cannot find any sources to import from
