@@ -12,7 +12,8 @@ if "%SOURCES%" == "" (
 )
 
 set DEST=
-if exist v:\Video\_Import set DEST=v:\Video\_Import
+dir v: && if exist v:\Video\_Import set DEST=v:\Video\_Import
+dir m: && if exist m:\Video\_Import set DEST=m:\Video\_Import
 
 if '%DEST%' == '' (
 	echo ERROR: cannot find destination import folder
