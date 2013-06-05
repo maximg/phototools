@@ -17,7 +17,7 @@ if not exist %DEST% (
 	exit /b
 )
 
-set FILES=import*.bat backup*.bat
+set FILES=import*.bat backup*.bat group*.* move*.bat
 
 for %%F in (%FILES%) do attrib -r %DEST%\%%F
 for %%F in (%FILES%) do copy /y %%F %DEST%
