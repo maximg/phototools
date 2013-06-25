@@ -1,5 +1,8 @@
 *.py[cod]
 
+photothumb.db
+GOPR*.mp4
+
 # C extensions
 *.so
 
