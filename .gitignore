@@ -2,6 +2,7 @@
 
 photothumb.db
 GOPR*.mp4
+workdir
 
 # C extensions
 *.so
