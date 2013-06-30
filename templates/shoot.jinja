@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}" />
+</head>
+
+<body>
+
+<div id="content">
+	<table>
+		{% for item in shots %}
+			{% if loop.index0 is divisibleby 6 %}
+				<tr>
+		    {% endif %}
+					<td>
+						<a href="{{ item.location }}">
+							<img src="{{ item.thumbnail }}" width="150" height="120"/>
+						</a>
+					</td>
+			{% if loop.index is divisibleby 6 %}
+				</tr>
+		    {% endif %}
+		{% endfor %}	
+	</table>
+</div>
+
+</body>
+</html>

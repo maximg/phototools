@@ -1,0 +1,6 @@
+
+:: split video in 2 parts
+d:\bin\ffmpeg\bin\ffmpeg -i test.mp4 -t 00:00:20 -c copy test1.mp4 -ss 00:00:60 -c copy test2.mp4
+
+:: reduce video size
+d:\bin\ffmpeg\bin\ffmpeg -i test1.mp4 -filter:v scale=120:-1 -acodec copy test1s.mp4
